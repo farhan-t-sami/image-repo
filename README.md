@@ -1,6 +1,7 @@
 # image-repo
 
 Shopify's developer intern challenge - Image add and filter functions
+
 Upload images and filter uploaded images according to their types
 
 Check out my demo: https://fts-imagerepo.herokuapp.com/
