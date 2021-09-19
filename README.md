@@ -29,7 +29,7 @@ pip install -r requirements.txt
   - pytz==2021.1
   - sqlparse==0.4.2
 
-- Go to the directory that has settings.py and run the following commands:
+- Go to the directory that has manage.py and run the following commands:
 ```
 python3 manage.py makemigrations
 python3 manage.py migrate
