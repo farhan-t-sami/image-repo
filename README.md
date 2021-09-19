@@ -10,9 +10,16 @@ Setup instructions:
 
 - Clone the repo
 
-- Run python3 -m venv <name_of_virtualenv> (or equivalent)
-
-- Install compatible dependencies from requirements.txt
+- Set up virtual environment using:
+``` 
+python3 -m venv <name_of_virtualenv>
+```
+- Cd to the directory where requirements.txt is located
+- Activate your virtualenv and run the following command in your shell
+```
+pip install -r requirements.txt
+```
+- Dependencies from requirements.txt
   - asgiref==3.4.1
   - Django==3.2.7
   - django-environ==0.7.0
