@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Load static for icon -->
+    {% load static %}
+    <link rel="icon" type="image/png" href="{% static '/favicon.png' %}"/>
+
+    <title>ImageHub | {{ page_name }}</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-light bg-light justify-content-between">
+        <a class="navbar-brand" href="{% url 'gallery' %}">
+            <img src="{% static '/favicon.png' %}" alt="" width="30" height="24">
+            &nbsp 
+            ImageHub | {{ page_name }}
+        </a>
+
+        <!-- Making sure these options only appear in Gallery -->
+        {% if page_name == 'Gallery' %}
+                    
+        <form  method = "GET" class="justify-content-start">
+            {{ type_filter.form }}
+            <button class="btn btn-sm btn-outline-success" type="submit">Search</button>
+        </form>
+            <!-- Link to upload page -->
+            <a class="d-flex btn btn-outline-primary" href="{% url 'upload' %}">Upload</a>
+        {% endif %}
+    </nav>
+
+    <div class="container">
+
+        <br>
+
+        <!-- Other pages extend from here -->
+        {% block content %}
+        
+        {% endblock %}
+
+        <hr>
+        <h5>Project by <a href="https://www.linkedin.com/in/farhan-t-sami/"><b>Farhan Sami</b></a></h5>
+        <hr>
+
+    </div>
+
+    <!-- Bootstrap and JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>

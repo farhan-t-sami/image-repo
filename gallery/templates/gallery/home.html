@@ -1,0 +1,11 @@
+{% extends './base.html' %}
+
+{% block content %}
+
+    {% for image in images %}
+        <h5>Name: {{ image.image_name }} | Type: {{ image.image_type }}</h5>
+        <img src={{ image.image_file.url }} class="img-thumbnail rounded">
+        <br><br>
+    {% endfor %}
+
+{% endblock content %}
