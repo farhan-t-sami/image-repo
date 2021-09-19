@@ -32,7 +32,7 @@ SECRET_KEY = env('SECRET_KEY')
 # This will be set to False when pushed to production
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['fts-imagerepo.herokuapp.com',]
 
 
 # Application definition
