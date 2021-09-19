@@ -1,8 +1,9 @@
 # image-repo
 
-Shopify's developer intern challenge - Image add and search functions
+Shopify's developer intern challenge - Image add and filter functions
+Upload images and filter uploaded images according to their types
 
-Check out the my demo: https://fts-imagerepo.herokuapp.com/
+Check out my demo: https://fts-imagerepo.herokuapp.com/
 
 Or set it up in your own machine!
 
@@ -36,4 +37,4 @@ python3 manage.py migrate
 python3 manage.py runserver
 ```
 - The app is ready for use! 
-Go to localhost:8000 (or any other port preferred by your PC)
+Open your browser and go to localhost:8000 (or any other port preferred by your PC)
